@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button, CheckButtons
@@ -462,8 +461,6 @@ def compare(pop: Population, param: str, param_values:list):
     ax14.legend(handles=[linep1, linep2, linep3, linep4])
     ax14.set_ylim(0, 1.05)
     ax14.grid()
-    plt.savefig(pop.name+'_'+param+'.png')
-    # xdata = [x/ max(param_values) for x in param_values]
 
     fig3 = plt.figure(constrained_layout=True)
     ax15 = fig3.add_subplot()
@@ -504,7 +501,7 @@ def compare(pop: Population, param: str, param_values:list):
 
 
 print('+++ ALLELFREQUENZEN VORHERSAGMODELL +++\n',
-      ' Important: Enter all required values in the required format. Use a dot (.) as the decimal seperator.\n')
+      ' Achtung: Geben Sie alle Parametern in den erforderten Format. Verwenden Sie ein Punkt (.) als Dezimaltrennzeichen.\n')
 
 '''
 ja = input('DO YOU WANT TO INPUT DATA BY HAND?\n yes:[0] / no:[1] ')
